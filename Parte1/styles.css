@@ -1,0 +1,27 @@
+body{
+    background: linear-gradient(to bottom,rgb(0, 0, 0), 50%, rgb(255, 255, 255)), no-repeat;
+}
+
+.tabla{
+    border: 2px solid rgb(0, 0, 0);
+}
+.img{
+    object-fit: cover;
+    width: 50%;
+}
+.icon{
+    width: 7%;
+    height: auto;
+}
+.columna{
+    background-color: grey;
+}
+.iconfooter{
+    width: 4%;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+.colorblanco{
+    color: white;
+}
+
