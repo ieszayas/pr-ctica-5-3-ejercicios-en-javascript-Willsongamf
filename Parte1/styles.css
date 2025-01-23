@@ -9,12 +9,16 @@ body{
     object-fit: cover;
     width: 50%;
 }
+
 .icon{
     width: 7%;
     height: auto;
 }
 .columna{
     background-color: grey;
+}
+.pista{
+    color: grey;
 }
 .iconfooter{
     width: 4%;
