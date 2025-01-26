@@ -55,34 +55,40 @@
               <div id="Toast" class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
 
               </div>
+
+              <div id="Toast_enviado" class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+
+              </div>
             </div>
 
             <div class="col-5">
             
-              <form class="needs-validation" id="registrationForm ">
-                <div class="mb-3">
+              <form  id="registrationForm">
+                <div  class="mb-3">
                   <label for="nameid" class="form-label colorblanco">Nombre</label>
-                  <input id="Campo_Nombre" type="text" class="form-control" id="nameid" required="">
+                  <input type="text" class="form-control pista" placeholder="Jose" id="nameid" >
+                  <div class="error-message errorMensaje" id="errorNombre"></div>
                 </div>
               
                 <div class="mb-3">
                   <label for="surnameid" class="form-label colorblanco">Apellido</label>
-                  <input type="text" class="form-control" id="surnameid" required="">
+                  <input type="text" class="form-control" id="surnameid"  placeholder="De luque">
+                  <div class="error-message errorMensaje" id="errorApellido"></div>
                 </div>
               
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label colorblanco">Email</label>
+                  <label for="exampleInputEmail1" class="form-label colorblanco" >Email</label>
                   <input 
-                    type="email" 
+                    type="text" 
                     class="form-control" 
-                    id="exampleInputEmail1" 
-                    required 
-                    aria-describedby="emailHelp">
+                    id="exampleInputEmail1"  placeholder="Jose@gmail.com">
+                    <div class="error-message errorMensaje" id="errorEmail"></div>
                 </div>
-              <div class="mb-3">
-                <label class="col-lg-3 control-label colorblanco">Fecha de nacimiento</label>
-                <input id="Fecha nacimiento" type="text" class="form-control pista" name="birthday" value="YYYY/MM/DD"/>
-                <span class="help-block colorblanco"></span>
+              <div  class="mb-3">
+                <label  class="col-lg-3 control-label colorblanco">Fecha de nacimiento</label>
+                <input id="Fecha nacimiento" type="date" class="form-control pista" name="birthday" placeholder="YYYY/MM/DD"/>
+                <span  class="help-block colorblanco"></span>
+                <div class="error-message errorMensaje" id="errorFecha"></div>
                  
               </div>
                 <div class="mb-3">
@@ -91,8 +97,8 @@
                     type="password" 
                     class="form-control" 
                     id="exampleInputPassword1" 
-                    minlength="6" 
-                    required>
+                    placeholder="*********">
+                    <div class="error-message errorMensaje" id="errorContraseña"></div>
                 </div>
                 
                 <div class="form-check">
@@ -109,13 +115,11 @@
                 </div>
 
                 <div class="form-check mt-3">
-                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
                   <label class="form-check-label colorblanco" for="invalidCheck">
                     Acepta los terminos de servicio
                   </label>
-                   <div class="invalid-feedback">
-                       Debes aceptar los terminos de servicio
-                  </div>
+                  <div class="error-message errorMensaje" id="errorCheckbox"></div>
                 </div>
               
                 <button id="boton_entrar" type="submit" class="btn btn-primary mt-3">Entrar</button>

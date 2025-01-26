@@ -9,7 +9,9 @@ body{
     object-fit: cover;
     width: 50%;
 }
-
+.errorMensaje{
+    color: rgb(212, 3, 3);
+}
 .icon{
     width: 7%;
     height: auto;
