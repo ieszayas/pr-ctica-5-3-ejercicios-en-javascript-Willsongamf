@@ -7,14 +7,17 @@
 
 .table{
     border: 2px solid rgb(0, 0, 0);
-    background-color: red;
+    border-radius: 6px;
 }
 
-
+.imgampliada{
+width: 500%;
+}
 .img{
     object-fit: cover;
-    width: 50%;
-   fill: red;
+    width: 35%;
+    border: 5px solid black;
+    border-radius: 6%;
 }
 .errorMensaje{
     color: rgb(212, 3, 3);
