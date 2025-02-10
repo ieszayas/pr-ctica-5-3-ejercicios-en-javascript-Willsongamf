@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="p-3 m-0 border-0 bd-example">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">TorrencoWilliams</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active " aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid mt-3 text-center ">
+       
+       
+         
+          <div class="row align-items-start">
+           
+            <div class="col-2">
+              <div id="Toast" class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+
+              </div>
+
+              <div id="Toast_enviado" class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+
+              </div>
+            </div>
+
+            <div class="col-5">
+            
+              <form  id="registrationForm">
+                <div  class="mb-3">
+                  <label for="nameid" class="form-label colorblanco">Nombre</label>
+                  <input type="text" class="form-control pista" placeholder="Jose" id="nameid" >
+                  <div class="error-message errorMensaje" id="errorNombre"></div>
+                </div>
+              
+                <div class="mb-3">
+                  <label for="surnameid" class="form-label colorblanco">Apellido</label>
+                  <input type="text" class="form-control" id="surnameid"  placeholder="De luque">
+                  <div class="error-message errorMensaje" id="errorApellido"></div>
+                </div>
+              
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label colorblanco" >Email</label>
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    id="exampleInputEmail1"  placeholder="Jose@gmail.com">
+                    <div class="error-message errorMensaje" id="errorEmail"></div>
+                </div>
+              <div  class="mb-3">
+                <label  class="col-lg-3 control-label colorblanco">Fecha de nacimiento</label>
+                <input id="Fecha nacimiento" type="date" class="form-control pista" name="birthday" placeholder="YYYY/MM/DD"/>
+                <span  class="help-block colorblanco"></span>
+                <div class="error-message errorMensaje" id="errorFecha"></div>
+                 
+              </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label colorblanco">Contraseña</label>
+                  <input 
+                    type="password" 
+                    class="form-control" 
+                    id="exampleInputPassword1" 
+                    placeholder="*********">
+                    <div class="error-message errorMensaje" id="errorContraseña"></div>
+                </div>
+                
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label colorblanco" for="flexRadioDefault1">
+                    PvE (No podras aspirar a premios)
+                  </label>
+                </div>
+                <div class="form-check mt-2">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                  <label class="form-check-label colorblanco" for="flexRadioDefault2">
+                   PvP
+                  </label>
+                </div>
+
+                <div class="form-check mt-3">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                  <label class="form-check-label colorblanco" for="invalidCheck">
+                    Acepta los terminos de servicio
+                  </label>
+                  <div class="error-message errorMensaje" id="errorCheckbox"></div>
+                </div>
+              
+                <button id="boton_entrar" type="submit" class="btn btn-primary mt-3">Entrar</button>
+                <button id="boton_borrar" type="reset" class="btn btn-primary mt-3">Borrar</button>
+                
+              </form>
+             
+           
+            </div>
+            
+            <div class="col">
+              <table class="table tabla ">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Victorias</th>
+                    <th scope="col">Partidas Jugadas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Alejandro</td>
+                    <td>120</td>
+                    <td>150</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Beatriz</td>
+                    <td>115</td>
+                    <td>140</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Carlos</td>
+                    <td>110</td>
+                    <td>135</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Diana</td>
+                    <td>105</td>
+                    <td>130</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Eduardo</td>
+                    <td>100</td>
+                    <td>125</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Fernanda</td>
+                    <td>95</td>
+                    <td>120</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Gabriel</td>
+                    <td>90</td>
+                    <td>115</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>Helena</td>
+                    <td>85</td>
+                    <td>110</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>Ignacio</td>
+                    <td>80</td>
+                    <td>105</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>Julia</td>
+                    <td>75</td>
+                    <td>100</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+          </div>
+          <div class="row align-items-start mt-4">
+            
+            <div class="col text-center">
+              <img src="Rainbow.jpeg" class="img" alt="Imagen aleatoria">
+              
+            </div>
+  
+          </div>
+          
+          <div class="container text-center mt-5">
+            <div class="row align-items-start descripcion ">
+              <div class="col">
+                <img src="controller.svg" class="icon" alt="Icono de avion">
+                <p>El torneo de TorrecoWilliams podra jugarse tamto en pc, PS5, Xbox One y Nintendo Switch </p>
+              </div>
+              <div class="col">
+                <img src="cash.svg" class="icon" alt="Icono de dinero">
+                <p>Podras llegar a ganar hasta 10.000 euros simplemente haciendo lo que mas quieres.¡Jugar Videojuegos!</p>
+              </div>
+              <div class="col">
+                <img src="hand-thumbs-up.svg" class="icon" alt="Icono de pulgar">
+                <p>El torneo de TorrencoWilliams es un torneo donde se busca el fairplay y la competividad sana</p>              
+              </div>
+            </div>
+          </div>
+        
+        
+    
+      </div>
+
+      <footer class="bg-dark text-white py-4 mt-2">
+        <div class="container">
+            <div class="row">
+                <!-- Términos Legales -->
+                <div class="col-md-4">
+                    <h5>Términos Legales</h5>
+                    <ul class="list-unstyled">
+                        <li>  <img src="file-ruled-fill.svg" class="iconfooter" alt="Icono de pulgar"><i class="bi bi-file-earmark-pdf-fill"></i> <a href="#" class="text-white"> Leer Términos</a></li>
+                    </ul>
+                </div>
+   
+                <!-- Nuestras Redes -->
+                <div class="col-md-4">
+                    <h5>Nuestras Redes</h5>
+                    <ul class="list-unstyled">
+                        <li> <img src="instagram.svg" class="iconfooter" alt="Icono de pulgar"><i class="bi bi-instagram"></i> <a href="#" class="text-white" target="_blank"> Instagram</a></li>
+                        <li><img src="facebook.svg" class="iconfooter" alt="Icono de pulgar"><i class="bi bi-facebook"></i> <a href="#" class="text-white" target="_blank"> Facebook</a></li>
+                        <li><img src="tiktok.svg" class="iconfooter" alt="Icono de pulgar"><i class="bi bi-tiktok"></i> <a href="#" class="text-white" target="_blank"> TikTok</a></li>
+                    </ul>
+                </div>
+   
+                <!-- Trabaja con Nosotros -->
+                <div class="col-md-4">
+                    <h5>Trabaja con Nosotros</h5>
+                    <ul class="list-unstyled">
+                        <li><img src="eye-fill.svg" class="iconfooter" alt="Icono de pulgar"><i class="bi bi-briefcase-fill"></i> <a href="#" class="text-white">Ver Vacantes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+      <script src="scripts.js"></script>
+</body>
+</html>
